@@ -2,7 +2,6 @@ body {
     background-color: #1e1e1e;
     color: white;
 }
-
 .profile-card {
     background: #252525;
     padding: 20px;
@@ -11,32 +10,62 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
-
 .avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid cyan !important;
+    border: 3px solid #7CFC00 !important;
+    animation: girar 2s ease-in-out;
 }
-
 input, textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
-    border: 2px solid #00adb5;
+    border: 2px solid #7CFC00;
     background: #333;
     color: white;
 }
-
 button {
-    background-color: #00adb5;
-    color: white;
+    background-color: #7CFC00;
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+button:hover {
+    background-color: #5DAE00;
+    transform: scale(1.1);
 }
 
-button:hover {
-    background-color: #007a85;
+/* Reflexión sobre Identidad Digital */
+.reflexion {
+    background: #252525;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+.reflexion h2 {
+    color: #7CFC00;
+}
+
+/* Animación de avatar */
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modo claro */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+.light-mode .profile-card {
+    background: #f0f0f0;
+}
+.light-mode button {
+    background-color: #5DAE00;
+    color: black;
 }

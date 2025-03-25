@@ -3,33 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil - [AntonioTech]</title>
-    
+    <title>Mi Perfil - Pseudónimo</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
         body { font-family: 'Montserrat', sans-serif; background-color: #121212; color: white; text-align: center; }
     </style>
-    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="profile-card">
-        <h1 style="color: cyan;">¡Hola, soy AntonioTech!</h1>
+        <h1 style="color: #7CFC00;">¡Hola, soy [Tu Pseudónimo]!</h1>
         <img src="avatar.png" alt="Mi Avatar" class="avatar">
-        <p>Este es mi perfil, creado con HTML y CSS.</p>
+        <p>Este es mi perfil ficticio, creado con HTML y CSS.</p>
+
         <form>
             <label for="name">Nombre/Pseudónimo:</label>
             <input type="text" id="name" name="name" placeholder="Tu pseudónimo" required>
-            
-            <label for="email">Email :</label>
+
+            <label for="email">Email (ficticio):</label>
             <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-            
+
             <label for="message">Sobre mí:</label>
             <textarea id="message" name="message" placeholder="Describe tu perfil..."></textarea>
-            
+
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <div class="reflexion">
+        <h2>Reflexión sobre Identidad Digital</h2>
+        <p><strong>1️⃣ ¿Por qué es importante usar un pseudónimo en Internet?</strong><br>
+        Es importante usar un pseudónimo en Internet para proteger nuestra privacidad y seguridad.</p>
+
+        <p><strong>2️⃣ ¿Qué datos personales nunca deberíamos publicar en línea?</strong><br>
+        Nunca debemos compartir datos como nuestra dirección, número de teléfono o información bancaria.</p>
+
+        <p><strong>3️⃣ ¿Cómo afecta la identidad digital a futuras oportunidades laborales?</strong><br>
+        Una mala reputación en línea puede afectar nuestras oportunidades laborales, mientras que un buen perfil digital puede ser beneficioso.</p>
+    </div>
+
+    <button id="toggleTheme">Cambiar Tema</button>
+
+    <script>
+        // Validación del formulario
+        document.querySelector("form").addEventListener("submit", function(event) {
+            let nombre = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mensaje = document.getElementById("message").value;
+
+            if (nombre.trim() === "" || email.trim() === "" || mensaje.trim() === "") {
+                alert("Por favor, completa todos los campos antes de enviar.");
+                event.preventDefault(); // Evita que se envíe el formulario
+            }
+        });
+
+        // Cambio de tema oscuro/claro
+        document.getElementById("toggleTheme").addEventListener("click", function() {
+            document.body.classList.toggle("light-mode");
+        });
+    </script>
+
 </body>
 </html>
-
